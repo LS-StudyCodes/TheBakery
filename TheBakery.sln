@@ -5,6 +5,8 @@ VisualStudioVersion = 17.11.35222.181
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TheBakery", "TheBakery\TheBakery.csproj", "{2C138D0B-2EEE-4A68-B029-4F9B42FF7035}"
 EndProject
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "TheBakeryAPI", "TheBakeryAPI\TheBakeryAPI.fsproj", "{776683D2-1193-47C6-9F3D-589050FEC6D4}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{2C138D0B-2EEE-4A68-B029-4F9B42FF7035}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2C138D0B-2EEE-4A68-B029-4F9B42FF7035}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2C138D0B-2EEE-4A68-B029-4F9B42FF7035}.Release|Any CPU.Build.0 = Release|Any CPU
+		{776683D2-1193-47C6-9F3D-589050FEC6D4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{776683D2-1193-47C6-9F3D-589050FEC6D4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{776683D2-1193-47C6-9F3D-589050FEC6D4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{776683D2-1193-47C6-9F3D-589050FEC6D4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

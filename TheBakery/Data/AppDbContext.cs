@@ -15,7 +15,8 @@ namespace TheBakery.Data
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-  
+            
+
         }
     }
 }

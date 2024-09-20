@@ -1,8 +1,9 @@
-﻿
-namespace TheBakery.Models
+﻿namespace TheBakery.Models
 {
     public class Produto
     {
+        internal object Vendas;
+
         public int Id { get; set; }
         public string Nome { get; set; }
 
@@ -10,10 +11,5 @@ namespace TheBakery.Models
 
         public string Descricao { get; set; }
         public int Quantidade { get; set; }
-
-        public static implicit operator Produto(List<Produto> v)
-        {
-            throw new NotImplementedException();
-        }
     }
 }
