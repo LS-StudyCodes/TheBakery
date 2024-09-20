@@ -1,0 +1,38 @@
+﻿@page
+@model TheBakery.Pages.Vendas.ResumoVendaModel
+@{
+    ViewData["Title"] = "Resumo da Venda";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Resumo da Venda</h1>
+
+    <p><strong>Cliente:</strong> @Model.NomeCliente</p>
+    <p><strong>Valor Total:</strong> R$ @Model.ValorTotal.ToString("F2")</p>
+
+    <h2>Produtos:</h2>
+    <ul>
+        @foreach (var produto in Model.ProdutosVenda)
+        {
+            <li>@produto.Nome - R$ @produto.Preco.ToString("F2") x @produto.Quantidade</li>
+        }
+    </ul>
+
+    <form method="post">
+        <div class="form-group">
+            <label for="formaPagamento">Forma de Pagamento:</label>
+            <select class="form-control" id="formaPagamento" name="formaPagamento" required>
+                <option value="PIX">PIX</option>
+                <option value="Dinheiro">Dinheiro</option>
+                <option value="Credito">Crédito</option>
+                <option value="Debito">Débito</option>
+
+            </select>
+        </div>
+
+        <button type="submit" class="btn  
+ btn-success">
+            Finalizar Compra
+        </button>
+    </form>
+</div>

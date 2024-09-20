@@ -1,0 +1,42 @@
+﻿@page
+@model TheBakery.Pages.Vendas.IndexModel
+@{
+    ViewData["Title"] = "Todas as Vendas";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Todas as Vendas</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Cliente</th>
+                <th>Valor Total</th>
+                <th>Forma de Pagamento</th>
+                <th>Data da Venda</th>
+                <th>Produtos</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var venda in Model.Vendas)
+            {
+                <tr>
+                    <td>@venda.Id</td>
+                    <td>@(venda.Cliente?.Nome ?? "Cliente não definido")</td>
+                    <td>R$ @venda.ValorTotal.ToString("F2")</td>
+                    <td>@venda.FormaPagamento</td>
+                    <td>@venda.DataVenda.ToString("dd/MM/yyyy HH:mm")</td>
+                    <td>
+                        <ul>
+                            @foreach (var produto in venda.Produtos)
+                            {
+                                <li>@produto.Nome - R$ @produto.Preco.ToString("F2") x @produto.Quantidade</li>
+                            }
+                        </ul>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

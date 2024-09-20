@@ -1,0 +1,26 @@
+﻿@page
+@model TheBakery.Pages.Venda.ClienteFidelizadoModel
+@{
+    ViewData["Title"] = "Cliente Fidelizado";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Cliente Fidelizado</h1>
+
+    <form method="post">
+        <div class="form-group">
+            <label for="clienteId">Selecione um Cliente:</label>
+            <select class="form-control" id="clienteId" name="clienteId">
+                @foreach (var cliente in Model.Clientes)
+                {
+                    <option value="@cliente.Id">@cliente.Nome</option>
+
+                }
+            </select>
+        </div>
+
+        <button type="submit" class="btn btn-primary">Continuar</button>
+    </form>
+
+    <a asp-page="/Clientes/Create">Criar Novo Cliente</a>
+</div>

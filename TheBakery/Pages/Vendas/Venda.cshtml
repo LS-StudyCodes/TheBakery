@@ -1,0 +1,44 @@
+﻿@page
+@model TheBakery.Pages.Vendas.VendaModel
+@{
+    ViewData["Title"] = "Venda";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Venda</h1>
+
+    <form method="post">
+        <div class="form-group">
+            <label for="produtoNome">Nome do Produto:</label>
+            <input type="text" class="form-control" id="produtoNome"  
+                   name="produtoNome" required>
+        </div>
+        <div class="form-group">
+            <label for="produtoPreco">Preço:</label>
+            <input type="number" class="form-control" id="produtoPreco"  
+                   name="produtoPreco" required>
+        </div>
+        <div class="form-group">
+            <label for="produtoQuantidade">Quantidade:</label>
+            <input type="number" class="form-control" id="produtoQuantidade" name="produtoQuantidade" required>
+        </div>
+        <div class="form-group">
+            <label for="produtoDescricao">Descrição (opcional):</label>
+            <textarea class="form-control" id="produtoDescricao" name="produtoDescricao"></textarea>
+        </div>
+
+        <button type="submit" class="btn btn-primary">Adicionar Produto</button>
+    </form>
+
+    <h2>Produtos Adicionados:</h2>
+    <ul>
+        @foreach (var produto in Model.ProdutosVenda)
+        {
+            <li>@produto.Nome - R$ @produto.Preco.ToString("F2") x @produto.Quantidade</li>
+        }
+    </ul>
+
+    <h2>Valor Total: R$ @Model.ValorTotal.ToString("F2")</h2>
+
+    <a class="btn btn-success" asp-page="/Vendas/ResumoVenda">Resumo da Venda</a>
+</div>

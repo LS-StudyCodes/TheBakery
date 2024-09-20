@@ -1,0 +1,18 @@
+﻿@page
+@model TheBakery.Pages.Venda.EscolhaTipoClienteModel
+@{
+    ViewData["Title"] = "Escolha o Tipo de Cliente";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Escolha o Tipo de Cliente</h1>
+
+    <div class="row">
+        <div class="col-md-6">
+            <a class="btn btn-primary btn-block" asp-page="/Vendas/ClienteFidelizado">Cliente Fidelizado</a>
+        </div>
+        <div class="col-md-6">
+            <a class="btn btn-secondary btn-block" asp-page="/Vendas/ClienteSemFidelidade">Cliente Sem Fidelidade</a>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,22 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "The Bakery";
+}
+
+<div class="text-center">
+    <h1 class="display-4">The Bakery</h1>
+    <p>Sistema simples de gerenciamento de produto, venda e clientes.</p>
+
+    <div class="row">
+        <div class="col-md-4">
+            <a class="btn btn-primary btn-block" asp-page="/Clientes/Index">Todos os Clientes</a>
+        </div>
+        <div class="col-md-4">
+            <a class="btn btn-success btn-block" asp-page="/Vendas/EscolhaTipoCliente">Nova Venda</a>
+        </div>
+        <div class="col-md-4">
+            <a class="btn btn-info btn-block" asp-page="/Vendas/Index">Todas as Vendas</a>
+        </div>
+    </div>
+</div>
