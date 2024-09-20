@@ -30,7 +30,7 @@ namespace TheBakery.Pages.Venda
             _context.SaveChanges();
 
             TempData["ClienteId"] = Cliente.Id;
-            TempData.Keep();
+            TempData.Keep("ClienteId"); 
 
             return RedirectToPage("/Vendas/Venda");
         }

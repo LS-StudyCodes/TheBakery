@@ -14,8 +14,6 @@ namespace TheBakery
             // Add services to the container.
             builder.Services.AddRazorPages();
 
-            builder.Services.AddSingleton<ITempDataSerializer, JsonTempDataSerializer>();
-
 
             builder.Services.AddMvc().AddSessionStateTempDataProvider();
             builder.Services.AddSession();
